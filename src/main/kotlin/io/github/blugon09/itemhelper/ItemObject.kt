@@ -157,18 +157,14 @@ class ItemObject {
         }
 
         //CanPlace
-        val place = setOf<Material>()
         for (p in canPlace) {
-            place.plus(p)
+            stack.itemMeta.canPlaceOn.add(p)
         }
-        stack.itemMeta.canPlaceOn = place
 
         //CanDestroy
-        val destroy = setOf<Material>()
-        for (p in destroy) {
-            destroy.plus(p)
+        for (d in canDestroy) {
+            stack.itemMeta.canDestroy.add(d)
         }
-        stack.itemMeta.canPlaceOn = destroy
 
         //Damage
         stack.durability = damage.toShort()
