@@ -190,6 +190,7 @@ fun ItemStack.asItemObject(): ItemObject {
         }
     }
 
+    
     //Type, Amount, DisplayName, Lore
     val itemObject = ItemObject(this.type, this.amount, this.itemMeta.displayName, nLore)
 

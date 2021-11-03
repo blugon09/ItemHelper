@@ -10,6 +10,7 @@ version = "1.0.6-SNAPSHOT"
 
 
 
+
 repositories {
     mavenCentral()
     maven("https://papermc.io/repo/repository/maven-public/")
