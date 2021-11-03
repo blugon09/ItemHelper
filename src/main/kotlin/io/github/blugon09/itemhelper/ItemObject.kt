@@ -3,6 +3,7 @@ package io.github.blugon09.itemhelper
 import com.destroystokyo.paper.Namespaced
 import com.google.common.collect.Multimap
 import net.kyori.adventure.text.Component
+import net.kyori.adventure.text.TextComponent
 import org.bukkit.Material
 import org.bukkit.attribute.Attribute
 import org.bukkit.attribute.AttributeModifier
@@ -13,8 +14,8 @@ import org.bukkit.inventory.ItemStack
 class ItemObject {
     var type = Material.AIR
     var amount = 1
-    var displayName = ""
-    var lore = arrayListOf<String>()
+    var displayName : TextComponent? = Component.text("")
+    var lore = arrayListOf<TextComponent>()
     val enchantment = HashMap<Enchantment, Int>()
     var customModelData = 0
     val itemFlag = arrayListOf<ItemFlag>()
@@ -36,12 +37,12 @@ class ItemObject {
         this.type = type
         this.amount = amount
     }
-    constructor(type: Material = Material.AIR, amount: Int = 1, displayName: String = "") {
+    constructor(type: Material = Material.AIR, amount: Int = 1, displayName: TextComponent? = null) {
         this.type = type
         this.amount = amount
         this.displayName = displayName
     }
-    constructor(type: Material = Material.AIR, amount: Int = 1, displayName: String = "", lore: ArrayList<String> = arrayListOf()) {
+    constructor(type: Material = Material.AIR, amount: Int = 1, displayName: TextComponent? = null, lore: ArrayList<TextComponent> = arrayListOf()) {
         this.type = type
         this.amount = amount
         this.displayName = displayName
@@ -50,11 +51,11 @@ class ItemObject {
 
 
     //===================<Lore>===================
-    fun getLineInLore(line : Int): String {
+    fun getLineInLore(line : Int): TextComponent {
         return this.lore[line]
     }
 
-    fun addLore(lore : String) {
+    fun addLore(lore : TextComponent) {
         this.lore.add(lore)
     }
 
@@ -124,13 +125,13 @@ class ItemObject {
         val meta = stack.itemMeta
 
         //DisplayName
-        if (displayName != "") {
-            meta.displayName(Component.text(displayName))
+        if (displayName != null) {
+            meta.displayName(displayName)
         }
 
         //Lore
         if (lore.isNotEmpty()) {
-            meta.lore = lore
+            meta.lore(lore as List<Component>)
         }
 
         //Enchantment
@@ -199,7 +200,24 @@ fun ItemStack.asItemObject(): ItemObject {
 
 
     //Type, Amount, DisplayName, Lore
-    val itemObject = ItemObject(this.type, this.amount, this.itemMeta.displayName, nLore)
+    val itemObject = ItemObject(this.type, this.amount)
+
+    //DisplayName
+    if(this.itemMeta.hasDisplayName()) {
+        itemObject.displayName = this.itemMeta.displayName() as TextComponent
+    }
+
+    //Lore
+    if(this.itemMeta.lore() != null) {
+        if(this.itemMeta.lore()!!.isNotEmpty()) {
+            for(l in this.itemMeta.lore()!!) {
+                itemObject.addLore(l as TextComponent)
+            }
+        }
+    }
+
+    //Unbreakable
+    itemObject.unbreakable = this.itemMeta.isUnbreakable
 
     //CustomModelData
     if(this.itemMeta.hasCustomModelData()) {
