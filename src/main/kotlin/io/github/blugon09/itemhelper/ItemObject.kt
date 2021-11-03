@@ -1,5 +1,6 @@
 package io.github.blugon09.itemhelper
 
+import com.destroystokyo.paper.Namespaced
 import net.kyori.adventure.text.Component
 import org.bukkit.Material
 import org.bukkit.attribute.Attribute
@@ -158,12 +159,12 @@ class ItemObject {
 
         //CanPlace
         for (p in canPlace) {
-            stack.itemMeta.canPlaceOn.add(p)
+            stack.itemMeta.placeableKeys.add(p.key)
         }
 
         //CanDestroy
         for (d in canDestroy) {
-            stack.itemMeta.canDestroy.add(d)
+            stack.itemMeta.destroyableKeys.add(d.key)
         }
 
         //Damage

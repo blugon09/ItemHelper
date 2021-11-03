@@ -1,0 +1,116 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "io.github.blugon09",
+    "module": "ItemHelper",
+    "version": "1.0.2-SNAPSHOT",
+    "attributes": {
+      "org.gradle.status": "integration"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "7.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 16,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.5.31"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ItemHelper-1.0.2-SNAPSHOT.jar",
+          "url": "ItemHelper-1.0.2-SNAPSHOT.jar",
+          "size": 9132,
+          "sha512": "9cc80871170fd3e76ca8bac40835a9ebd81e9414b81de7de5668a2b94f07476ab95017e51814018af10509af5ce625f0c9c1378684c295b3227cf6a135c1496b",
+          "sha256": "7b0e1ef280863c312b06a5a51057d6137926a30df20062bd60a2ce0e10662b76",
+          "sha1": "0b39deffcddf6a76b3cd27e211f84a6bd04e6bfa",
+          "md5": "eac19045805a5cb0b65f660683a2aabd"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 16,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.localToProject": "public",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "io.papermc.paper",
+          "module": "paper-api",
+          "version": {
+            "requires": "1.17.1-R0.1-SNAPSHOT"
+          }
+        },
+        {
+          "group": "net.kyori",
+          "module": "adventure-api",
+          "version": {
+            "requires": "4.9.2"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib-jdk8",
+          "version": {
+            "requires": "1.5.31"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "ItemHelper-1.0.2-SNAPSHOT.jar",
+          "url": "ItemHelper-1.0.2-SNAPSHOT.jar",
+          "size": 9132,
+          "sha512": "9cc80871170fd3e76ca8bac40835a9ebd81e9414b81de7de5668a2b94f07476ab95017e51814018af10509af5ce625f0c9c1378684c295b3227cf6a135c1496b",
+          "sha256": "7b0e1ef280863c312b06a5a51057d6137926a30df20062bd60a2ce0e10662b76",
+          "sha1": "0b39deffcddf6a76b3cd27e211f84a6bd04e6bfa",
+          "md5": "eac19045805a5cb0b65f660683a2aabd"
+        }
+      ]
+    },
+    {
+      "name": "shadowRuntimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "shadowed",
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "ItemHelper-1.0.2-SNAPSHOT-all.jar",
+          "url": "ItemHelper-1.0.2-SNAPSHOT-all.jar",
+          "size": 26866979,
+          "sha512": "6388858da575222167bc6958ce008a3272460699a2d465447cfd0c094c27ffc41266149a8e72b4587ddb7b80e17c954f913ec1441e79f685a010d22229c161f8",
+          "sha256": "c2fa9a32028e8ff4a4e0838917f16b24f982f1ec139a9fa91ad2f3e96f1f3118",
+          "sha1": "bef4a57429c0454a97016dca619907f656320ac6",
+          "md5": "bc00a9f76dc9c0d3bfab0e864ae35569"
+        }
+      ]
+    }
+  ]
+}

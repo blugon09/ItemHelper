@@ -1,0 +1,41 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:io.github.blugon09.itemhelper////PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/index.html
+$dokka.location:io.github.blugon09.itemhelper//asItemObject/org.bukkit.inventory.ItemStack#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/as-item-object.html
+$dokka.location:io.github.blugon09.itemhelper//subtractItemByType/org.bukkit.inventory.Inventory#org.bukkit.Material#kotlin.Int/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/subtract-item-by-type.html
+$dokka.location:io.github.blugon09.itemhelper//subtractItemByType/org.bukkit.inventory.Inventory#org.bukkit.Material/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/subtract-item-by-type.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject///PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/index.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/ItemObject/#org.bukkit.Material#kotlin.Int#kotlin.String#java.util.ArrayList[kotlin.String]/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/-item-object.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/ItemObject/#org.bukkit.Material#kotlin.Int#kotlin.String/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/-item-object.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/ItemObject/#org.bukkit.Material#kotlin.Int/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/-item-object.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/ItemObject/#org.bukkit.Material/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/-item-object.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/addAttribute/#org.bukkit.attribute.Attribute#org.bukkit.attribute.AttributeModifier/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/add-attribute.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/addCanDestroy/#org.bukkit.Material/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/add-can-destroy.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/addCanPlace/#org.bukkit.Material/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/add-can-place.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/addItemFlag/#org.bukkit.inventory.ItemFlag/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/add-item-flag.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/addLore/#kotlin.String/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/add-lore.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/amount/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/amount.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/attribute/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/attribute.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/build/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/build.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/canDestroy/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/can-destroy.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/canPlace/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/can-place.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/customModelData/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/custom-model-data.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/damage/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/damage.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/displayName/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/display-name.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/enchantment/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/enchantment.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/getAttributes/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/get-attributes.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/getLineInLore/#kotlin.Int/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/get-line-in-lore.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/itemFlag/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/item-flag.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/lore/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/lore.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/maxDuration/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/max-duration.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/rarity/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/rarity.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/removeAttribute/#org.bukkit.attribute.Attribute/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/remove-attribute.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/removeCanDestroy/#org.bukkit.Material/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/remove-can-destroy.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/removeCanPlace/#org.bukkit.Material/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/remove-can-place.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/removeEnchantment/#org.bukkit.enchantments.Enchantment/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/remove-enchantment.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/removeItemFlag/#org.bukkit.inventory.ItemFlag/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/remove-item-flag.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/setEnchantment/#org.bukkit.enchantments.Enchantment#kotlin.Int/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/set-enchantment.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/type/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/type.html
+$dokka.location:io.github.blugon09.itemhelper/ItemObject/unbreakable/#/PointingToDeclaration/-item-helper/io.github.blugon09.itemhelper/-item-object/unbreakable.html
+io.github.blugon09.itemhelper
+
