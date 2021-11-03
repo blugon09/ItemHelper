@@ -23,15 +23,13 @@ dependencies {
 }
 
 tasks {
-    create<Jar>("sourcesJar") {
-        archiveClassifier.set("source")
-        sourceSets["main"].allSource
+    javadoc {
+        options.encoding = "UTF-8"
     }
 
-    shadowJar {
-        archiveBaseName.set(rootProject.name)
-        archiveClassifier.set("")
-        archiveVersion.set("")
+    create<Jar>("sourcesJar") {
+        archiveClassifier.set("sources")
+        from(sourceSets["main"].allSource)
     }
 
     create<Jar>("javadocJar") {
@@ -40,6 +38,7 @@ tasks {
         from("$buildDir/dokka/html")
     }
 }
+
 
 publishing {
     publications {
@@ -50,7 +49,6 @@ publishing {
 
             repositories {
                 maven {
-                    name = "MavenPublic"
                     val releasesRepoUrl = "https://repo.projecttl.net/repository/maven-public/"
                     val snapshotsRepoUrl = "https://repo.projecttl.net/repository/maven-snapshots/"
                     url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
