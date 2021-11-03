@@ -158,14 +158,18 @@ class ItemObject {
         }
 
         //CanPlace
+        val place = mutableSetOf<Namespaced>()
         for (p in canPlace) {
-            stack.itemMeta.placeableKeys.add(p.key)
+            place.add(p.key)
         }
+        meta.setPlaceableKeys(place)
 
         //CanDestroy
+        val destroy = mutableSetOf<Namespaced>()
         for (d in canDestroy) {
-            stack.itemMeta.destroyableKeys.add(d.key)
+            place.add(d.key)
         }
+        meta.setDestroyableKeys(destroy)
 
         //Damage
         stack.durability = damage.toShort()
@@ -174,4 +178,46 @@ class ItemObject {
         stack.itemMeta = meta
         return stack
     }
+}
+
+
+fun ItemStack.asItemObject(): ItemObject {
+    val lore = this.lore
+    val nLore = arrayListOf<String>()
+    if(lore != null) {
+        for (l in lore) {
+            nLore.add(l)
+        }
+    }
+
+    //Type, Amount, DisplayName, Lore
+    val itemObject = ItemObject(this.type, this.amount, this.itemMeta.displayName, nLore)
+
+    //CustomModelData
+    itemObject.customModelData = this.itemMeta.customModelData
+
+    //Enchantments
+    for(e in this.enchantments) {
+        itemObject.setEnchantment(e.key, e.value)
+    }
+
+    //ItemFlag
+    for(f in this.itemFlags) {
+        itemObject.addItemFlag(f)
+    }
+
+    //CanPlace
+    for(p in this.itemMeta.canPlaceOn) {
+        itemObject.addCanPlace(p)
+    }
+
+    //CanDestroy
+    for(d in this.itemMeta.canDestroy) {
+        itemObject.addCanDestroy(d)
+    }
+
+    //Damage
+    itemObject.damage = this.durability.toInt()
+
+    return itemObject
 }

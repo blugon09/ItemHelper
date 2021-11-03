@@ -3,7 +3,7 @@
   "component": {
     "group": "io.github.blugon09",
     "module": "ItemHelper",
-    "version": "1.0.2-SNAPSHOT",
+    "version": "1.0.3-SNAPSHOT",
     "attributes": {
       "org.gradle.status": "integration"
     }
@@ -36,13 +36,13 @@
       ],
       "files": [
         {
-          "name": "ItemHelper-1.0.2-SNAPSHOT.jar",
-          "url": "ItemHelper-1.0.2-SNAPSHOT.jar",
-          "size": 9132,
-          "sha512": "9cc80871170fd3e76ca8bac40835a9ebd81e9414b81de7de5668a2b94f07476ab95017e51814018af10509af5ce625f0c9c1378684c295b3227cf6a135c1496b",
-          "sha256": "7b0e1ef280863c312b06a5a51057d6137926a30df20062bd60a2ce0e10662b76",
-          "sha1": "0b39deffcddf6a76b3cd27e211f84a6bd04e6bfa",
-          "md5": "eac19045805a5cb0b65f660683a2aabd"
+          "name": "ItemHelper-1.0.3-SNAPSHOT.jar",
+          "url": "ItemHelper-1.0.3-SNAPSHOT.jar",
+          "size": 9167,
+          "sha512": "fadd699a1cef2c593ebab6bc457fbc3c4a0650b953dc8de1e5793e3d582218daa4da4efeb72eb84e7118ebd082d0575f6084b2d1e9325dbea86f4acf67a78df0",
+          "sha256": "841a873a7a3143b53dc1c13b4355bbab949f468af4cafd4ef866affc15c40581",
+          "sha1": "f6627e0932ac8977157bec2afc9be1e4e44b81e5",
+          "md5": "5e3a013d72f152005586f0c9f1f21973"
         }
       ]
     },
@@ -82,13 +82,13 @@
       ],
       "files": [
         {
-          "name": "ItemHelper-1.0.2-SNAPSHOT.jar",
-          "url": "ItemHelper-1.0.2-SNAPSHOT.jar",
-          "size": 9132,
-          "sha512": "9cc80871170fd3e76ca8bac40835a9ebd81e9414b81de7de5668a2b94f07476ab95017e51814018af10509af5ce625f0c9c1378684c295b3227cf6a135c1496b",
-          "sha256": "7b0e1ef280863c312b06a5a51057d6137926a30df20062bd60a2ce0e10662b76",
-          "sha1": "0b39deffcddf6a76b3cd27e211f84a6bd04e6bfa",
-          "md5": "eac19045805a5cb0b65f660683a2aabd"
+          "name": "ItemHelper-1.0.3-SNAPSHOT.jar",
+          "url": "ItemHelper-1.0.3-SNAPSHOT.jar",
+          "size": 9167,
+          "sha512": "fadd699a1cef2c593ebab6bc457fbc3c4a0650b953dc8de1e5793e3d582218daa4da4efeb72eb84e7118ebd082d0575f6084b2d1e9325dbea86f4acf67a78df0",
+          "sha256": "841a873a7a3143b53dc1c13b4355bbab949f468af4cafd4ef866affc15c40581",
+          "sha1": "f6627e0932ac8977157bec2afc9be1e4e44b81e5",
+          "md5": "5e3a013d72f152005586f0c9f1f21973"
         }
       ]
     },
@@ -102,13 +102,13 @@
       },
       "files": [
         {
-          "name": "ItemHelper-1.0.2-SNAPSHOT-all.jar",
-          "url": "ItemHelper-1.0.2-SNAPSHOT-all.jar",
-          "size": 26866979,
-          "sha512": "6388858da575222167bc6958ce008a3272460699a2d465447cfd0c094c27ffc41266149a8e72b4587ddb7b80e17c954f913ec1441e79f685a010d22229c161f8",
-          "sha256": "c2fa9a32028e8ff4a4e0838917f16b24f982f1ec139a9fa91ad2f3e96f1f3118",
-          "sha1": "bef4a57429c0454a97016dca619907f656320ac6",
-          "md5": "bc00a9f76dc9c0d3bfab0e864ae35569"
+          "name": "ItemHelper-1.0.3-SNAPSHOT-all.jar",
+          "url": "ItemHelper-1.0.3-SNAPSHOT-all.jar",
+          "size": 26867014,
+          "sha512": "c34419c0b81797bf105686eff519ac7655125b8eda25c37c904acd8c338b6418e5e9f0d202bacd6dcc6a84c1ea020149ef3f6fefbfb129cacf1a927231765c93",
+          "sha256": "1704123409535c10d6c90c67d6900c9fb5d414ad245dd24f7be63a692394abf9",
+          "sha1": "ae341c5a53f493ab9c85ed40520c058e38468e42",
+          "md5": "22d3bf2b3eb5daed51f94fde16961910"
         }
       ]
     }
