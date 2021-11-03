@@ -1,6 +1,7 @@
 plugins {
     kotlin("jvm") version "1.5.31"
     id("com.github.johnrengelman.shadow") version "7.0.0"
+    id("org.jetbrains.dokka") version "1.5.0"
     `maven-publish`
 }
 
@@ -21,33 +22,69 @@ dependencies {
     implementation("net.kyori:adventure-api:4.9.2")
 }
 
-val shade = configurations.create("shade")
-shade.extendsFrom(configurations.implementation.get())
-
 tasks {
     create<Jar>("sourcesJar") {
         archiveClassifier.set("source")
         sourceSets["main"].allSource
     }
 
-    jar {
-        from(
-            shade.map {
-                if (it.isDirectory) {
-                    it
-                } else {
-                    zipTree(it)
-                }
-            }
-        )
+    shadowJar {
+        archiveBaseName.set(rootProject.name)
+        archiveClassifier.set("")
+        archiveVersion.set("")
+    }
+
+    create<Jar>("javadocJar") {
+        archiveClassifier.set("javadoc")
+        dependsOn("dokkaHtml")
+        from("$buildDir/dokka/html")
     }
 }
 
 publishing {
     publications {
         create<MavenPublication>(rootProject.name) {
-            artifact(tasks["sourcesJar"])
             from(components["java"])
+            artifact(tasks["sourcesJar"])
+            artifact(tasks["javadocJar"])
+
+            repositories {
+                maven {
+                    name = "MavenPublic"
+                    val releasesRepoUrl = "https://repo.projecttl.net/repository/maven-public/"
+                    val snapshotsRepoUrl = "https://repo.projecttl.net/repository/maven-snapshots/"
+                    url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
+
+                    credentials.runCatching {
+                        username = project.properties["username"] as String?
+                        password = project.properties["password"] as String?
+                    }
+                }
+
+                pom {
+                    name.set(rootProject.name)
+                    description.set("")
+                    url.set("https://github.com/blugon09/ItemHelper")
+//                    licenses {
+//                        license {
+//                            name.set("")
+//                            url.set("")
+//                        }
+//                    }
+                    developers {
+                        developer {
+                            id.set("blugon09")
+                            name.set("Blugon")
+                            email.set("blugon0921@blugon.kro.kr")
+                        }
+                    }
+                    scm {
+                        connection.set("scm:git:https://github.com/blugon09/ItemHelper.git")
+                        developerConnection.set("scm:git:https://github.com/blugon09/ItemHelper.git")
+                        url.set("https://github.com/blugon09/ItemHelper.git")
+                    }
+                }
+            }
         }
     }
 }
