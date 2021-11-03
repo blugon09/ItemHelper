@@ -53,3 +53,26 @@ dependencies {
     implementation("io.github.blugon09:ItemHelper:VERSION")
 }
 ```
+
+<br><br>
+
+아이템 생성
+```kotlin
+val itemObject : ItemObject = ItemObject(Material, Amount, DisplayName, Lore)
+
+//ItemStack으로 빌드
+val itemStack : ItemStack = itemObject.build()
+```
+
+<br>
+
+아이템 정보 변경
+```kotlin
+val itemObject : ItemObject = player.inventory.itemInMainHand.asItemObject()
+itemObject.displayName = "String.component()로 String을 TextComponent로 간단하게 변경".component()
+itemObject.addLore("Lore!".component())
+itemObject.lore = arrayListOf("Lore2!".component(), "Lore3!".component())
+```
+<br>
+
+**해당 API는 현재 개발중인 SNAPSHOT버전이며 언제든지 생성 방식이 바뀔수 있습니다(근데 웬만하면 안바뀔듯)**
