@@ -1,6 +1,7 @@
 package io.github.blugon09.itemhelper
 
 import com.destroystokyo.paper.Namespaced
+import com.google.common.collect.Multimap
 import net.kyori.adventure.text.Component
 import org.bukkit.Material
 import org.bukkit.attribute.Attribute
@@ -18,7 +19,7 @@ class ItemObject {
     var customModelData = 0
     val itemFlag = arrayListOf<ItemFlag>()
     var unbreakable = false
-    var attribute = HashMap<Attribute, AttributeModifier>()
+    var attribute = HashMap<Attribute, ArrayList<AttributeModifier>>()
     var canPlace = arrayListOf<Material>()
     var canDestroy = arrayListOf<Material>()
     var damage = 0
@@ -78,10 +79,14 @@ class ItemObject {
 
     //===================<Attribute>===================
     fun addAttribute(attribute : Attribute, modifier : AttributeModifier) {
-        this.attribute[attribute] = modifier
+        if(this.attribute[attribute] != null) {
+            this.attribute[attribute]!!.add(modifier)
+        } else {
+            this.attribute[attribute] = arrayListOf(modifier)
+        }
     }
 
-    fun getAttributes(): HashMap<Attribute, AttributeModifier> {
+    fun getAttributes(): HashMap<Attribute, ArrayList<AttributeModifier>> {
         return this.attribute
     }
 
@@ -153,7 +158,9 @@ class ItemObject {
         //Attribute
         if(attribute.isNotEmpty()) {
             for(a in attribute) {
-                meta.addAttributeModifier(a.key, a.value)
+                for(m in a.value) {
+                    meta.addAttributeModifier(a.key, m)
+                }
             }
         }
 
@@ -190,7 +197,7 @@ fun ItemStack.asItemObject(): ItemObject {
         }
     }
 
-    
+
     //Type, Amount, DisplayName, Lore
     val itemObject = ItemObject(this.type, this.amount, this.itemMeta.displayName, nLore)
 
@@ -208,6 +215,21 @@ fun ItemStack.asItemObject(): ItemObject {
     for(f in this.itemFlags) {
         itemObject.addItemFlag(f)
     }
+
+    //Attribute
+    if(this.itemMeta.attributeModifiers != null) {
+        if(!this.itemMeta.attributeModifiers!!.isEmpty) {
+            val mulimap = this.itemMeta.attributeModifiers!!
+            val attributes = this.itemMeta.attributeModifiers!!.asMap()!!
+
+            for(a in attributes) {
+                for(m in mulimap[a.key]) {
+                    itemObject.addAttribute(a.key, m)
+                }
+            }
+        }
+    }
+
 
     //CanPlace
     for(p in this.itemMeta.canPlaceOn) {
