@@ -17,13 +17,13 @@ Use API
 ```xml
 <repositories>
     <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
+        <id>project-central</id>
+        <url>https://repo.projecttl.net/repository/maven-public/</url>
     </repository>
 </repositories>
 
 <dependency>
-    <groupId>com.github.blugon09</groupId>
+    <groupId>io.github.blugon09</groupId>
     <artifactId>ItemHelper</artifactId>
     <version>VERSION</version>
 </dependency>
@@ -34,11 +34,11 @@ Use API
 ```gradle
 repositories {
     ...
-    maven { 'https://jitpack.io/' }
+    maven { 'https://repo.projecttl.net/repository/maven-public/' }
 }
 
 dependencies {
-    implementation 'com.github.blugon09:ItemHelper:VERSION'
+    implementation 'io.github.blugon09:ItemHelper:VERSION'
 }
 ```
 
@@ -46,10 +46,10 @@ dependencies {
 ```gradle
 repositories {
     ...
-    maven("https://jitpack.io/")
+    maven("https://repo.projecttl.net/repository/maven-public/")
 }
 
 dependencies {
-    implementation("com.github.blugon09:ItemHelper:VERSION")
+    implementation("io.github.blugon09:ItemHelper:VERSION")
 }
 ```
