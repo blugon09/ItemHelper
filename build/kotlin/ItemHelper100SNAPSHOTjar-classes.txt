@@ -1,1 +1,0 @@
-C:\CodingFile\MCPluginApi\ItemHelper\build\classes\kotlin\main\io\github\blugon09\itemhelper\AsItemObjectKt.class;C:\CodingFile\MCPluginApi\ItemHelper\build\classes\kotlin\main\io\github\blugon09\itemhelper\ItemObject.class;C:\CodingFile\MCPluginApi\ItemHelper\build\classes\kotlin\main\io\github\blugon09\itemhelper\SubtractItemKt.class
