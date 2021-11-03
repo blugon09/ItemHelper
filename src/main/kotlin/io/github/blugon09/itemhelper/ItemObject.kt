@@ -194,7 +194,9 @@ fun ItemStack.asItemObject(): ItemObject {
     val itemObject = ItemObject(this.type, this.amount, this.itemMeta.displayName, nLore)
 
     //CustomModelData
-    itemObject.customModelData = this.itemMeta.customModelData
+    if(this.itemMeta.hasCustomModelData()) {
+        itemObject.customModelData = this.itemMeta.customModelData
+    }
 
     //Enchantments
     for(e in this.enchantments) {
