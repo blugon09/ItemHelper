@@ -56,17 +56,17 @@ dependencies {
 
 <br><br>
 
-아이템 생성
+Create ItemObject
 ```kotlin
 val itemObject : ItemObject = ItemObject(Material, Amount, DisplayName, Lore)
 
-//ItemStack으로 빌드
+//Build to ItemStack
 val itemStack : ItemStack = itemObject.build()
 ```
 
 <br>
 
-아이템 정보 변경
+Change ItemStack Info
 ```kotlin
 val itemObject : ItemObject = player.inventory.itemInMainHand.asItemObject()
 itemObject.displayName = "String.component()로 String을 TextComponent로 간단하게 변경".component()
