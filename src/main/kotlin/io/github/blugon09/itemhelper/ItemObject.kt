@@ -167,7 +167,7 @@ class ItemObject {
         //CanDestroy
         val destroy = mutableSetOf<Namespaced>()
         for (d in canDestroy) {
-            place.add(d.key)
+            destroy.add(d.key)
         }
         meta.setDestroyableKeys(destroy)
 
