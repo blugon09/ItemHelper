@@ -15,7 +15,7 @@ fun TextComponent.bold(apply : Boolean): TextComponent {
 fun TextComponent.italic(apply : Boolean): TextComponent {
     return this.decoration(TextDecoration.ITALIC, apply)
 }
-fun TextComponent.unerlined(apply : Boolean): TextComponent {
+fun TextComponent.underlined(apply : Boolean): TextComponent {
     return this.decoration(TextDecoration.UNDERLINED, apply)
 }
 fun TextComponent.obfuscated(apply : Boolean): TextComponent {
