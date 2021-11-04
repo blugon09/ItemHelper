@@ -8,6 +8,19 @@ fun String.component(): TextComponent {
     return Component.text(this)
 }
 
-fun TextComponent.effect(effect : TextDecoration, apply : Boolean): TextComponent {
-    return this.decoration(effect, apply)
+
+fun TextComponent.bold(apply : Boolean): TextComponent {
+    return this.decoration(TextDecoration.BOLD, apply)
+}
+fun TextComponent.italic(apply : Boolean): TextComponent {
+    return this.decoration(TextDecoration.ITALIC, apply)
+}
+fun TextComponent.unerlined(apply : Boolean): TextComponent {
+    return this.decoration(TextDecoration.UNDERLINED, apply)
+}
+fun TextComponent.obfuscated(apply : Boolean): TextComponent {
+    return this.decoration(TextDecoration.OBFUSCATED, apply)
+}
+fun TextComponent.strikethrough(apply : Boolean): TextComponent {
+    return this.decoration(TextDecoration.STRIKETHROUGH, apply)
 }
