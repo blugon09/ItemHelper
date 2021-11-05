@@ -14,6 +14,7 @@ fun Component.text(): TextComponent {
     return this as TextComponent
 }
 
+
 fun TextComponent.bold(apply : Boolean): TextComponent {
     return this.decoration(TextDecoration.BOLD, apply)
 }

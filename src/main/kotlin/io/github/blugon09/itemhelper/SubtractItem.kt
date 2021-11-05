@@ -37,6 +37,7 @@ fun Inventory.subtractItemByType(subtractItemType : Material, amount : Int) : Bo
 
 
 
+
 fun Player.subtractItemByType(subtractItemType : Material, amount : Int) : Boolean {
     return this.inventory.subtractItemByType(subtractItemType, amount)
 }

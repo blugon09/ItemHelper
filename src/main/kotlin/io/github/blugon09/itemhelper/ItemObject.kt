@@ -50,6 +50,7 @@ class ItemObject {
     }
 
 
+
     //===================<Lore>===================
     fun getLineInLore(line : Int): TextComponent {
         return this.lore[line]
