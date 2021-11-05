@@ -1,6 +1,7 @@
 package io.github.blugon09.itemhelper
 
 import org.bukkit.Material
+import org.bukkit.entity.Player
 import org.bukkit.inventory.Inventory
 
 fun Inventory.subtractItemByType(subtractItemType : Material) : Boolean {
@@ -32,4 +33,15 @@ fun Inventory.subtractItemByType(subtractItemType : Material, amount : Int) : Bo
         }
     }
     return false
+}
+
+
+
+fun Player.subtractItemByType(subtractItemType : Material, amount : Int) : Boolean {
+    return this.inventory.subtractItemByType(subtractItemType, amount)
+}
+
+
+fun Player.subtractItemByType(subtractItemType : Material) : Boolean {
+    return this.inventory.subtractItemByType(subtractItemType)
 }
