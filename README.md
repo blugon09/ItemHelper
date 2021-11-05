@@ -10,7 +10,10 @@
 <br>
 <br>
 
-##### Use API
+**해당 API는 현재 개발중인 SNAPSHOT버전이며 언제든지 생성 방식이 바뀔수 있습니다(근데 웬만하면 안바뀔듯)**
+
+
+### Use API
 
 
 ## Maven
@@ -74,5 +77,3 @@ itemObject.addLore("Lore!".component())
 itemObject.lore = arrayListOf("Lore2!".component(), "Lore3!".component())
 ```
 <br>
-
-**해당 API는 현재 개발중인 SNAPSHOT버전이며 언제든지 생성 방식이 바뀔수 있습니다(근데 웬만하면 안바뀔듯)**
