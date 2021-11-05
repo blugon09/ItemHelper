@@ -58,23 +58,8 @@ dependencies {
 }
 ```
 
-<br><br>
-
-Create ItemObject
-```kotlin
-val itemObject : ItemObject = ItemObject(Material, Amount, DisplayName, Lore)
-
-//Build to ItemStack
-val itemStack : ItemStack = itemObject.build()
-```
 
 <br>
+## WIKI
 
-Change ItemStack Info
-```kotlin
-val itemObject : ItemObject = player.inventory.itemInMainHand.asItemObject()
-itemObject.displayName = "String.component()로 String을 TextComponent로 간단하게 변경".component()
-itemObject.addLore("Lore!".component())
-itemObject.lore = arrayListOf("Lore2!".component(), "Lore3!".component())
-```
-<br>
+<a href="https://github.com/blugon09/ItemHelper/wiki"><img src="https://img.shields.io/badge/WIKI--blue?logo=BookStack&logoColor=FFFFFF" alt="Wiki"/></a>&nbsp;
