@@ -10,7 +10,11 @@
 <br>
 <br>
 
-##### Use API
+**해당 API는 현재 개발중인 SNAPSHOT버전이며 언제든지 사용 형식이 바뀔수 있습니다(근데 웬만하면 안바뀔듯)**
+<br>
+
+
+### Use API
 
 
 ## Maven
@@ -54,25 +58,9 @@ dependencies {
 }
 ```
 
-<br><br>
-
-Create ItemObject
-```kotlin
-val itemObject : ItemObject = ItemObject(Material, Amount, DisplayName, Lore)
-
-//Build to ItemStack
-val itemStack : ItemStack = itemObject.build()
-```
 
 <br>
 
-Change ItemStack Info
-```kotlin
-val itemObject : ItemObject = player.inventory.itemInMainHand.asItemObject()
-itemObject.displayName = "String.component()로 String을 TextComponent로 간단하게 변경".component()
-itemObject.addLore("Lore!".component())
-itemObject.lore = arrayListOf("Lore2!".component(), "Lore3!".component())
-```
-<br>
+## WIKI
 
-**해당 API는 현재 개발중인 SNAPSHOT버전이며 언제든지 생성 방식이 바뀔수 있습니다(근데 웬만하면 안바뀔듯)**
+<a href="https://github.com/blugon09/ItemHelper/wiki"><img src="https://img.shields.io/badge/WIKI--blue?logo=BookStack&logoColor=FFFFFF" alt="Wiki"/></a>&nbsp;
