@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.github.blugon09"
-version = "1.0.0-RELEASE"
+version = "1.0.0"
 
 
 repositories {
