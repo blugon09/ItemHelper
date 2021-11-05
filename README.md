@@ -60,6 +60,7 @@ dependencies {
 
 
 <br>
+
 ## WIKI
 
 <a href="https://github.com/blugon09/ItemHelper/wiki"><img src="https://img.shields.io/badge/WIKI--blue?logo=BookStack&logoColor=FFFFFF" alt="Wiki"/></a>&nbsp;
