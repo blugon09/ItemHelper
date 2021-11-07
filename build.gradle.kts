@@ -47,7 +47,7 @@ publishing {
 
             repositories {
                 maven {
-                    val releasesRepoUrl = "https://repo.projecttl.net/repository/maven-public/"
+                    val releasesRepoUrl = "https://repo.projecttl.net/repository/maven-releases/"
                     val snapshotsRepoUrl = "https://repo.projecttl.net/repository/maven-snapshots/"
                     url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
 
