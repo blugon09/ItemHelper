@@ -17,7 +17,7 @@ repositories {
 
 dependencies {
     implementation("io.papermc.paper:paper-api:1.17.1-R0.1-SNAPSHOT")
-    implementation("net.kyori:adventure-api:4.9.2")
+    implementation("net.kyori:adventure-api:4.9.3")
 }
 
 tasks {
