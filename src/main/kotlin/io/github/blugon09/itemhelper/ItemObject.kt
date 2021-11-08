@@ -190,6 +190,7 @@ class ItemObject {
 }
 
 
+
 fun ItemStack.asItemObject(): ItemObject {
     val lore = this.lore
     val nLore = arrayListOf<String>()
