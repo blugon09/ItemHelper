@@ -20,30 +20,36 @@ fun Inventory.subtractItemByType(type : Material) : Boolean {
 
 
 fun Inventory.subtractItemByType(type : Material, amount : Int) : Boolean {
+    val inventory = this
     var total = 0
 
-    for(i in 0 until this.size) {
-        if(this.getItem(i) == null) continue
-        val subtract = this.getItem(i)!!
+    for(i in 0 until inventory.size) {
+        if(inventory.getItem(i) == null) continue
+        val subtract = inventory.getItem(i)!!
 
         if(subtract.type != type) continue
         if(amount <= subtract.amount) {
-            this.getItem(i)!!.amount = this.getItem(i)!!.amount-amount
+            inventory.getItem(i)!!.amount = inventory.getItem(i)!!.amount-amount
             return true
         } else {
-            total += subtract.amount
+            total = amount
+            break
         }
     }
     if(amount <= total) {
-        for(i in 0 until this.size) {
-            if(this.getItem(i) == null) continue
-            val subtract = this.getItem(i)!!
+        for(i in 0 until inventory.size) {
+            if(inventory.getItem(i) == null) continue
+            val subtract = inventory.getItem(i)!!
 
             if(subtract.type != type) continue
             for(i2 in 0..subtract.amount) {
-                if(amount < total) {
-                    total--
-                    this.getItem(i)!!.amount = this.getItem(i)!!.amount-1
+                if(0 < total) {
+                    if(inventory.getItem(i) != null) {
+                        total--
+                        inventory.getItem(i)!!.amount = inventory.getItem(i)!!.amount - 1
+                    } else {
+                        continue
+                    }
                 } else {
                     return true
                 }
