@@ -127,7 +127,7 @@ class ItemObject {
 
     //===================<Clone>===================
     fun clone(): ItemObject {
-        return this.clone()
+        return this.build().clone().asItemObject()
     }
 
 
