@@ -21,6 +21,8 @@ fun Inventory.subtractItemByType(subtractItemType : Material) : Boolean {
 
 
 fun Inventory.subtractItemByType(subtractItemType : Material, amount : Int) : Boolean {
+    var total = 0
+
     for(i in 0 until this.size) {
         if(this.getItem(i) != null) {
             val subtractitem = this.getItem(i)!!
@@ -28,6 +30,26 @@ fun Inventory.subtractItemByType(subtractItemType : Material, amount : Int) : Bo
                 if(amount <= subtractitem.amount) {
                     this.getItem(i)!!.amount = this.getItem(i)!!.amount-amount
                     return true
+                } else {
+                    total += amount
+                    if(amount <= total) {
+                        for(i2 in 0 until this.size) {
+                            if(this.getItem(i) == null) continue
+                            val subtract = this.getItem(i)!!
+
+                            if(subtract.type != subtractItemType) continue
+                            for(i3 in 0..subtract.amount) {
+                                if(amount < total) {
+                                    total--
+                                    subtract.amount -= 1
+                                } else {
+                                    return true
+                                }
+                            }
+                        }
+                    } else {
+                        return true
+                    }
                 }
             }
         }
@@ -35,6 +57,51 @@ fun Inventory.subtractItemByType(subtractItemType : Material, amount : Int) : Bo
     return false
 }
 
+
+fun Inventory.isExistType(exist : Material) : Boolean {
+    for(i in 0 until this.size) {
+        if(this.getItem(i) == null) continue
+        val subtractitem = this.getItem(i)!!
+
+        if (subtractitem.type != exist) continue
+        return true
+    }
+    return false
+}
+
+
+fun Inventory.isExistType(exist : Material, amount : Int) : Boolean {
+    var total = 0
+
+    for(i in 0 until this.size) {
+        if(this.getItem(i) == null) continue
+        val subtractitem = this.getItem(i)!!
+
+        if(subtractitem.type != exist) continue
+        if(amount <= subtractitem.amount) {
+            this.getItem(i)!!.amount = this.getItem(i)!!.amount-amount
+            return true
+        } else {
+            total += amount
+            if(amount <= total) {
+                for(i2 in 0 until this.size) {
+                    if(this.getItem(i) == null) continue
+                    val subtract = this.getItem(i)!!
+                    if(subtract.type != exist) continue
+
+                    for(i3 in 0..subtract.amount) {
+                        if(amount < total) {
+                            total--
+                        } else {
+                            return true
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return false
+}
 
 
 fun Player.subtractItemByType(subtractItemType : Material, amount : Int) : Boolean {

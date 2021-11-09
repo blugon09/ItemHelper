@@ -1,7 +1,6 @@
 package io.github.blugon09.itemhelper
 
 import com.destroystokyo.paper.Namespaced
-import com.google.common.collect.Multimap
 import net.kyori.adventure.text.Component
 import net.kyori.adventure.text.TextComponent
 import org.bukkit.Material
@@ -56,66 +55,79 @@ class ItemObject {
         return this.lore[line]
     }
 
-    fun addLore(lore : TextComponent) {
+    fun addLore(lore : TextComponent): ItemObject {
         this.lore.add(lore)
+        return this
     }
 
     //===================<Enchantment>===================
-    fun setEnchantment(enchantment : Enchantment, value : Int) {
+    fun setEnchantment(enchantment : Enchantment, value : Int): ItemObject {
         this.enchantment[enchantment] = value
+        return this
     }
 
-    fun removeEnchantment(enchantment : Enchantment) {
+    fun removeEnchantment(enchantment : Enchantment): ItemObject {
         this.enchantment.remove(enchantment)
+        return this
     }
 
     //===================<ItemFlag>===================
 
-    fun addItemFlag(itemFlag : ItemFlag) {
+    fun addItemFlag(itemFlag : ItemFlag): ItemObject {
         this.itemFlag.add(itemFlag)
+        return this
     }
 
-    fun removeItemFlag(itemFlag : ItemFlag) {
+    fun removeItemFlag(itemFlag : ItemFlag): ItemObject {
         this.itemFlag.remove(itemFlag)
+        return this
     }
 
     //===================<Attribute>===================
-    fun addAttribute(attribute : Attribute, modifier : AttributeModifier) {
+    fun addAttribute(attribute : Attribute, modifier : AttributeModifier): ItemObject {
         if(this.attribute[attribute] != null) {
             this.attribute[attribute]!!.add(modifier)
         } else {
             this.attribute[attribute] = arrayListOf(modifier)
         }
+        return this
     }
 
-    fun getAttributes(): HashMap<Attribute, ArrayList<AttributeModifier>> {
-        return this.attribute
-    }
 
-    fun removeAttribute(attribute : Attribute) {
+    fun removeAttribute(attribute : Attribute): ItemObject {
         if(this.attribute.containsKey(attribute)) this.attribute.remove(attribute)
+        return this
     }
 
     //===================<CanPlace>===================
-    fun addCanPlace(canPlace : Material) {
-        if(this.canPlace.contains(canPlace)) return
+    fun addCanPlace(canPlace : Material): ItemObject {
+        if(this.canPlace.contains(canPlace)) return this
         this.canPlace.add(canPlace)
+        return this
     }
 
-    fun removeCanPlace(canPlace : Material) {
-        if(!this.canPlace.contains(canPlace)) return
+    fun removeCanPlace(canPlace : Material): ItemObject {
+        if(!this.canPlace.contains(canPlace)) return this
         this.canPlace.remove(canPlace)
+        return this
     }
 
     //===================<CanDestroy>===================
-    fun addCanDestroy(canDestroy : Material) {
-        if(this.canDestroy.contains(canDestroy)) return
+    fun addCanDestroy(canDestroy : Material): ItemObject {
+        if(this.canDestroy.contains(canDestroy)) return this
         this.canDestroy.add(canDestroy)
+        return this
     }
 
-    fun removeCanDestroy(canDestroy : Material) {
-        if(!this.canDestroy.contains(canDestroy)) return
+    fun removeCanDestroy(canDestroy : Material): ItemObject {
+        if(!this.canDestroy.contains(canDestroy)) return this
         this.canDestroy.remove(canDestroy)
+        return this
+    }
+
+    //===================<Clone>===================
+    fun clone(): ItemObject {
+        return this.clone()
     }
 
 
