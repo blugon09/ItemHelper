@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.github.blugon09"
-version = "1.2.1-SNAPSHOT"
+version = "1.2.2-SNAPSHOT"
 
 
 repositories {
@@ -60,7 +60,7 @@ publishing {
                 pom {
                     name.set(rootProject.name)
                     description.set("")
-                    url.set("https://github.com/blugon09/ItemHelper")
+                    url.set("https://github.com/blugon09/${rootProject.name}")
 //                    licenses {
 //                        license {
 //                            name.set("")
@@ -75,9 +75,9 @@ publishing {
                         }
                     }
                     scm {
-                        connection.set("scm:git:https://github.com/blugon09/ItemHelper.git")
-                        developerConnection.set("scm:git:https://github.com/blugon09/ItemHelper.git")
-                        url.set("https://github.com/blugon09/ItemHelper.git")
+                        connection.set("scm:git:https://github.com/blugon09/${rootProject.name}.git")
+                        developerConnection.set("scm:git:https://github.com/blugon09/${rootProject.name}.git")
+                        url.set("https://github.com/blugon09/${rootProject.name}.git")
                     }
                 }
             }
