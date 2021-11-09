@@ -32,11 +32,11 @@ fun Inventory.subtractItemByType(type : Material, amount : Int) : Boolean {
             inventory.getItem(i)!!.amount = inventory.getItem(i)!!.amount-amount
             return true
         } else {
-            total = amount
-            break
+            total += subtract.amount
         }
     }
     if(amount <= total) {
+        total = amount
         for(i in 0 until inventory.size) {
             if(inventory.getItem(i) == null) continue
             val subtract = inventory.getItem(i)!!
