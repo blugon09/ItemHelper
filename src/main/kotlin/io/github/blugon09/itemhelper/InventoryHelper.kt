@@ -43,7 +43,7 @@ fun Inventory.subtractItemByType(type : Material, amount : Int) : Boolean {
             for(i2 in 0..subtract.amount) {
                 if(amount != total) {
                     total--
-                    subtract.amount -= 1
+                    this.getItem(i)!!.amount - 1
                 } else {
                     return true
                 }
