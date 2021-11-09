@@ -57,9 +57,9 @@ fun Inventory.subtractItemByType(type : Material, amount : Int) : Boolean {
 fun Inventory.existType(exist : Material) : Boolean {
     for(i in 0 until this.size) {
         if(this.getItem(i) == null) continue
-        val subtractitem = this.getItem(i)!!
+        val item = this.getItem(i)!!
 
-        if (subtractitem.type != exist) continue
+        if (item.type != exist) continue
         return true
     }
     return false
@@ -71,15 +71,11 @@ fun Inventory.existType(exist : Material, amount : Int) : Boolean {
 
     for(i in 0 until this.size) {
         if(this.getItem(i) == null) continue
-        val subtract = this.getItem(i)!!
+        val item = this.getItem(i)!!
 
-        if(subtract.type != exist) continue
-        if(amount <= subtract.amount) {
-            this.getItem(i)!!.amount = this.getItem(i)!!.amount-amount
-            return true
-        } else {
-            total += subtract.amount
-        }
+        if(item.type != exist) continue
+        if(amount <= item.amount) return true
+        else total += item.amount
     }
     if(amount <= total) {
         return true
