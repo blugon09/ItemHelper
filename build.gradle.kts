@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "io.github.blugon09"
-version = "1.2.7-SNAPSHOT"
+version = "1.2.8-SNAPSHOT"
 
 
 repositories {
@@ -49,7 +49,10 @@ publishing {
                 maven {
                     val releasesRepoUrl = "https://repo.projecttl.net/repository/maven-releases/"
                     val snapshotsRepoUrl = "https://repo.projecttl.net/repository/maven-snapshots/"
-                    url = uri(if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl)
+                    url = uri(
+                        if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl
+                        else releasesRepoUrl
+                    )
 
                     credentials.runCatching {
                         username = project.properties["username"] as String?

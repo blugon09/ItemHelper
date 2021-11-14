@@ -127,7 +127,9 @@ class ItemObject {
 
     //===================<Clone>===================
     fun clone(): ItemObject {
-        return this.build().clone().asItemObject()
+        val array = ArrayList<ItemObject>()
+        array.add(this)
+        return array[0]
     }
 
 
@@ -203,6 +205,7 @@ class ItemObject {
 
 
 
+@Deprecated("아이템의 nbt데이터가 적용되지 않는 버그 확인, 현재 고치기 불가능")
 fun ItemStack.asItemObject(): ItemObject {
     val lore = this.lore
     val nLore = arrayListOf<String>()
@@ -217,7 +220,7 @@ fun ItemStack.asItemObject(): ItemObject {
     val itemObject = ItemObject(this.type, this.amount)
 
     //DisplayName
-    if(this.itemMeta.hasDisplayName()) {
+    if(this.itemMeta.displayName() != null) {
         itemObject.displayName = this.itemMeta.displayName() as TextComponent
     }
 
