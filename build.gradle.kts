@@ -1,12 +1,12 @@
 plugins {
-    kotlin("jvm") version "1.5.31"
+    kotlin("jvm") version "1.6.0"
     id("com.github.johnrengelman.shadow") version "7.0.0"
     id("org.jetbrains.dokka") version "1.5.0"
     `maven-publish`
 }
 
 group = "io.github.blugon09"
-version = "1.2.8-SNAPSHOT"
+version = "1.2.9-SNAPSHOT"
 
 
 repositories {

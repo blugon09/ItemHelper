@@ -1,9 +1,9 @@
 # ItemHelper
 
-[![ItemHelper](https://img.shields.io/badge/ItemHelper-1.2.8_SNAPSHOT-blue.svg)]()
+[![ItemHelper](https://img.shields.io/badge/ItemHelper-1.2.9_SNAPSHOT-blue.svg)]()
 <br><br>
 [![Java](https://img.shields.io/badge/Java-16-FF7700.svg?logo=java)]()
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.5.31-186FCC.svg?logo=kotlin)]()
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.6.0-186FCC.svg?logo=kotlin)]()
 [![PaperMC](https://img.shields.io/badge/PaperMC-1.17-222222.svg)]()
 
 
