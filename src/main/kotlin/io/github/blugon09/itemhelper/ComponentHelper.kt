@@ -10,7 +10,7 @@ fun String.component(): TextComponent {
     return Component.text(this)
 }
 
-fun Component.text(): TextComponent {
+fun Component.asText(): TextComponent {
     return this as TextComponent
 }
 

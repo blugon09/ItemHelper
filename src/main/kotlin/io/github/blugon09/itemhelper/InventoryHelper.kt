@@ -4,7 +4,7 @@ import org.bukkit.Material
 import org.bukkit.entity.Player
 import org.bukkit.inventory.Inventory
 
-fun Inventory.subtractItemByType(type : Material) : Boolean {
+fun Inventory.subtract(type : Material) : Boolean {
     for(i in 0 until this.size) {
         if(this.getItem(i) == null) continue
         val subtractitem = this.getItem(i)!!
@@ -19,7 +19,7 @@ fun Inventory.subtractItemByType(type : Material) : Boolean {
 }
 
 
-fun Inventory.subtractItemByType(type : Material, amount : Int) : Boolean {
+fun Inventory.subtract(type : Material, amount : Int) : Boolean {
     val inventory = this
     var total = 0
 
@@ -60,26 +60,26 @@ fun Inventory.subtractItemByType(type : Material, amount : Int) : Boolean {
 }
 
 
-fun Inventory.existType(exist : Material) : Boolean {
+fun Inventory.exist(type : Material) : Boolean {
     for(i in 0 until this.size) {
         if(this.getItem(i) == null) continue
         val item = this.getItem(i)!!
 
-        if (item.type != exist) continue
+        if (item.type != type) continue
         return true
     }
     return false
 }
 
 
-fun Inventory.existType(exist : Material, amount : Int) : Boolean {
+fun Inventory.exist(type : Material, amount : Int) : Boolean {
     var total = 0
 
     for(i in 0 until this.size) {
         if(this.getItem(i) == null) continue
         val item = this.getItem(i)!!
 
-        if(item.type != exist) continue
+        if(item.type != type) continue
         if(amount <= item.amount) return true
         else total += item.amount
     }
@@ -91,21 +91,21 @@ fun Inventory.existType(exist : Material, amount : Int) : Boolean {
 
 
 //Player
-fun Player.subtractItemByType(type : Material) : Boolean {
-    return this.inventory.subtractItemByType(type)
+fun Player.subtract(type : Material) : Boolean {
+    return this.inventory.subtract(type)
 }
 
 
-fun Player.subtractItemByType(type : Material, amount : Int) : Boolean {
-    return this.inventory.subtractItemByType(type, amount)
+fun Player.subtract(type : Material, amount : Int) : Boolean {
+    return this.inventory.subtract(type, amount)
 }
 
 
-fun Player.existType(subtractItemType : Material) : Boolean {
-    return this.inventory.existType(subtractItemType)
+fun Player.exist(type : Material) : Boolean {
+    return this.inventory.exist(type)
 }
 
 
-fun Player.existType(subtractItemType : Material, amount : Int) : Boolean {
-    return this.inventory.existType(subtractItemType, amount)
+fun Player.exist(type : Material, amount : Int) : Boolean {
+    return this.inventory.exist(type, amount)
 }
